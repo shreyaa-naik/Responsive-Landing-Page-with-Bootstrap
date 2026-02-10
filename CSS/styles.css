@@ -1,0 +1,152 @@
+/* 
+  Landing Page Styles
+  -------------------
+  Custom styles extending Bootstrap 5 for a premium aesthetic.
+  Organized by: Variables, Base, Components, Sections, Animations.
+*/
+
+/* 1. Variables & Global Styles */
+:root {
+  --primary-navy: #111b47;
+  --secondary-blue: #505c90;
+  --heading-dark: #091133;
+  --bg-light-blue: #f3f5ff;
+  --white: #ffffff;
+  --transition-smooth: all 0.3s ease;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--secondary-blue);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-dark);
+}
+
+/* 2. Components */
+.header-nav {
+  transition: var(--transition-smooth);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: 26px;
+  color: #37447e !important;
+  letter-spacing: 1px;
+}
+
+.navbar-brand-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-right: 0 !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-navy);
+  border-color: var(--primary-navy);
+  border-radius: 2px;
+}
+
+.btn-primary:hover {
+  background-color: #0d153a;
+  border-color: #0d153a;
+}
+
+.btn-dark {
+  background-color: var(--primary-navy);
+  border-radius: 2px;
+}
+
+/* 3. Sections */
+
+/* Hero */
+.hero-section {
+  min-height: 100vh;
+  background-image: url('data:image/svg+xml,<svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M50,0 Q100,0 100,50 L100,100 L0,100 L0,50 Q0,0 50,0" fill="%23f3f5ff"/></svg>');
+  background-size: cover;
+  padding-top: 100px;
+}
+
+.custom-hero-img {
+  max-width: 120%;
+  margin-right: -15%;
+}
+
+/* Pricing */
+.pricing-section {
+  border-radius: 0 0 50px 50px;
+}
+
+.price-card {
+  padding: 40px;
+  background: transparent;
+}
+
+/* Footer */
+footer {
+  background-color: #e7ecff;
+}
+
+.social-icons a {
+  font-size: 1.2rem;
+  transition: var(--transition-smooth);
+}
+
+.social-icons a:hover {
+  color: var(--primary-navy) !important;
+}
+
+/* 4. Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.reveal-fast {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* 5. Responsive Adjustments */
+@media (max-width: 991.98px) {
+  .hero-section {
+    text-align: center;
+    padding-top: 150px;
+    height: auto;
+  }
+
+  .custom-hero-img {
+    margin-right: 0;
+    max-width: 100%;
+    margin-top: 50px;
+  }
+
+  .navbar-collapse {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+}
